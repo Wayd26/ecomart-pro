@@ -1,0 +1,32 @@
+.CartList {
+    /* height: 100%; */
+    width: 100%;
+    border: 2px solid #061522;
+    /* padding-left: 25px;
+    padding-right: 25px; */
+}
+
+.CartListTitle {
+    width: 100%;
+    background: #061522;
+    /* margin-left: 20px; */
+    color: white;
+}
+
+.CartElement {
+    border: 2px solid #061522;
+    border-radius: 8px;
+}
+
+.validateCartButton, .validateCartButton:active, .validateCartButton:hover, .validateCartButton:focus {
+    padding-top: 5px important;
+    padding-bottom: 5px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    background: #061522 !important;
+    border: 2px solid #061522 !important;
+    box-shadow: 0 !important;
+    outline: none !important;
+
+
+}

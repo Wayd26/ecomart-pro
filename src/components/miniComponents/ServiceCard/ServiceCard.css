@@ -1,0 +1,13 @@
+.OverflowHidden {
+    overflow-y: scroll !important;
+}
+
+.AddToCartButton, .AddToCartButton:hover, .AddToCartButton:focus, .AddToCartButton:active {
+
+    background: #061522 !important;
+    border: #061522 !important;
+    box-shadow: none !important;
+    border-radius: 0  0 5px 5px !important;
+    width: 100% !important;
+
+}
