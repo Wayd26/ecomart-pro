@@ -7,7 +7,7 @@ import "./Home.css"
 
 const Home = () => {
   return <div>
-    <Carousel prevLabel="" nextLabel="" fade="true">
+    <Carousel prevLabel="" nextLabel="" fade="true"> 
   <Carousel.Item interval={3000}>
     <img
       className="CarouselImg"

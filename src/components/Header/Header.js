@@ -33,8 +33,8 @@ const Header = () => {
 
     </Col>
     <Col sm={2} className="HeaderAppName my-auto">
-      {/* <span >ECOMARTPRO EXPERT</span> */}
-      <span >My App</span>
+      <span >ECOMARTPRO EXPERT</span>
+      {/* <span >My App</span> */}
 
     </Col>
     <Col sm={6} className="my-auto totalheight">

@@ -1,0 +1,49 @@
+.CatalogCard {
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   padding: 20px;
+   margin: 20px;
+   border-radius: 8px;
+   height: 50vh;
+   width: 300px;
+}
+
+.CatalogCard:hover {
+    transform: scale(1.1);
+}
+
+.BackNextIcon {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin : auto 10px auto 10px;
+}
+
+.AddToCartButton, .AddToCartButton:hover, .AddToCartButton:focus, .AddToCartButton:active {
+
+    background: #061522 !important;
+    border: #061522 !important;
+    box-shadow: none !important;
+    border-radius: 5px !important;
+    /* width: 100% !important; */
+    padding: 5px 10px 5px 10px !important;
+
+}
+.OverflowHidden {
+    overflow-y: scroll !important;
+}
+
+.Description {
+    height: 125px;
+    margin: 5px;
+}
+
+.Label {
+    font-weight: bold;
+    height: 50px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.CatImage {
+    height: 150px;
+}

@@ -3,20 +3,22 @@ import headspace1 from "../../assets/images/headspace1.jpeg"
 import ServiceCard from "../miniComponents/ServiceCard/ServiceCard";
 import CartList from "../miniComponents/CartList/CartList";
 import { Row, Col } from "react-bootstrap"
-import {services} from "../../data/services"
+import { services } from "../../data/services"
 
 import { Card, Button } from "react-bootstrap";
 import "../miniComponents/ServiceCard/ServiceCard.css";
 import headspace from "../../assets/images/headspace.png"
 import "./Services.css";
-
-
-
-
+import {useDispatch, useSelector, shallowEqual} from "react-redux";
+import * as actions from "../../redux/actions/index"
 
 const Services = () => {
 
-  const [servicesState, setServicesState] = useState(services);
+  const dispatch = useDispatch();
+  const states = useSelector(state=>state, shallowEqual);
+
+
+  const [servicesState, setServicesState] = useState(states.services);
 
   const [selectedServices, setSelectedServices] = useState({});
 
@@ -33,18 +35,18 @@ const Services = () => {
 
   const handleAddToCart = (id) => {
     console.log("lang Checked")
-    var updatedServices = {...selectedServices};
+    var updatedServices = { ...selectedServices };
     updatedServices[id] = ""
     setSelectedServices(updatedServices)
 
-    var addedService = {...serviceAdded};
-    addedService[id] = true ;
+    var addedService = { ...serviceAdded };
+    addedService[id] = true;
     setServiceAdded(addedService)
     console.log("selectedServices this ==> ", selectedServices)
     console.log("updatedServices ==> ", updatedServices)
     console.log("addedService ==> ", addedService)
     console.log("serviceAdded this ==> ", serviceAdded)
-    let element = servicesState.find(o => o.id === id);
+    let element = states.services?.find(o => o.id === id);
     console.log("serviceAdded final ==> ", element)
     // setSelectedServices({...selectedServices, element})
     servicesInCart.push(element)
@@ -63,41 +65,54 @@ const Services = () => {
     var addedService = { ...serviceAdded };
     addedService[id] = false
     setServiceAdded(addedService)
-    let element = servicesState.find(o => o.id === id);
+    let element = states.services?.find(o => o.id === id);
     servicesInCart.pop(element)
   }
- 
+
   useEffect(() => {
-    console.log(services)
-  } ,[])
- 
+    dispatch({type: "ADD_SERVICES_IN_CART", key: 'servicesInCart', payload: servicesInCart});
+    console.log("Services in Cart from Redux ---> ", states)
+  }, [servicesInCart.length])
+
   useEffect(() => {
-setFormAvailable(OpenForm)
-console.log("formAvailablec---> ", formAvailable)
-  } ,[formAvailable])
+    setFormAvailable(OpenForm)
+    console.log("formAvailablec---> ", formAvailable)
+  }, [formAvailable])
+
+  useEffect(() => {
+    // setLocalState("Local State")
+    dispatch(actions.getServices())
+    // dispatch({type: "SET", key: 'sharedState', payload: "Shared State"});
+    console.log("Services from redux ---> ", states)
+    // setTimeout(() => {
+    //   dispatch(actions.getServices())
+    //   console.log("Services from redux ---> ", states)
+      
+    // }, 1500)
+}, [])
   return <div className="mx-auto">
     <Row className="p-5">
-   <Col 
-  //  sm={9}
-   >
-    <Row className="mx-auto ScrollEffect">
-      
-      {servicesState ? servicesState.map((service, key) => {
-        return <Col key={key} sm={4} className="mb-3">
-        <ServiceCard 
-        // addToCart={addToChart} 
-        id={service.id}
-        title={service.title} 
-        description={service.description} 
-        imgLink={service.img}
-        addedToCart={service.addedToCart}
-        handleRemoveFromCart={()=>{handleRemoveFromCart(service.id)}}
-        handleAddToCart={()=>{handleAddToCart(service.id)}}
-        serviceAdded={serviceAdded} />
+      <Col
+      //  sm={9}
+      >
+        <Row className="mx-auto ScrollEffect">
 
-{/* Start ServiceCard */}
+          {states.services ? states.services.map((service, key) => {
+            return <Col key={key} sm={4} className="mb-3">
+              <ServiceCard
+                // addToCart={addToChart} 
+                id={service.id}
+                title={service.title}
+                description={service.description}
+                imgLink={service.img}
+                addedToCart={service.addedToCart}
+                handleRemoveFromCart={() => { handleRemoveFromCart(service.id) }}
+                handleAddToCart={() => { handleAddToCart(service.id) }}
+                serviceAdded={serviceAdded} />
 
-{/* <Card style={{ width: '15rem', height: '15rem' }} className="mx-auto">
+              {/* Start ServiceCard */}
+
+              {/* <Card style={{ width: '15rem', height: '15rem' }} className="mx-auto">
   <Card.Img variant="right" 
   style={{height:`5rem`}}
  
@@ -116,31 +131,31 @@ console.log("formAvailablec---> ", formAvailable)
     :
     <Button className="AddToCartButton" onClick={() => handleAddToCart(service.id)}>{"Ajouter au panier"}</Button>
                                                     }
-    
+                                                    
     
 </Card> */}
 
-{/* End ServiceCard */}
+              {/* End ServiceCard */}
 
 
 
 
 
+            </Col>
+          }) : <div>Aucun Service Disponible</div>}
+
+
+        </Row>
+      </Col>
+      {servicesInCart.length !== 0 &&
+        <Col sm={3}>
+          <CartList servicesInCart={states.servicesInCart}
+            handleRemoveFromCart={handleRemoveFromCart}
+            OpenForm={OpenForm} />
         </Col>
-      }) : <div>Aucun Service Disponible</div>}
-    
-    
+      }
     </Row>
-    </Col>
-    {servicesInCart.length !== 0 && 
-    <Col sm={3} style={{}}>
-      <CartList servicesInCart={servicesInCart} 
-                handleRemoveFromCart={handleRemoveFromCart}
-                OpenForm={OpenForm}/>
-    </Col> 
-}
-      </Row>
-    </div>;
+  </div>;
 };
 
 export default Services;
