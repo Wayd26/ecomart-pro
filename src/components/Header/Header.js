@@ -7,6 +7,7 @@ import { TiBook } from 'react-icons/ti'
 import { RiCustomerService2Line } from 'react-icons/ri'
 import { useHistory } from "react-router-dom";
 import { FiPhone, FiMail } from "react-icons/fi"
+import logo from '../../assets/icons/ecomaproexpert2.jpeg'
 
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
   return <Row className="Header ">
     <Col sm={1}>
 
-      <img className="HeaderIcon" src={house} />
+      <img className="HeaderIcon" src={logo} />
 
     </Col>
     <Col sm={2} className="HeaderAppName my-auto">

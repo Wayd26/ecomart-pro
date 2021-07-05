@@ -8,7 +8,7 @@ import { ToastProvider, useToasts } from 'react-toast-notifications';
 
 const CartList = ({servicesInCart, handleRemoveFromCart, OpenForm, catalogsInCart}) => {
 
-  const [showFormModal, setShowFormModal] = useState(true);
+  const [showFormModal, setShowFormModal] = useState(false);
 
   const { addToast } = useToasts();
 
