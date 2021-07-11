@@ -2,12 +2,119 @@
     overflow-y: scroll !important;
 }
 
-.AddToCartButton, .AddToCartButton:hover, .AddToCartButton:focus, .AddToCartButton:active {
+.AddToCartButtonS, .AddToCartButtonS:hover, .AddToCartButtonS:focus, .AddToCartButtonS:active {
 
-    background: #061522 !important;
-    border: #061522 !important;
+    background: #002156 !important;
+    border: #002156 !important;
     box-shadow: none !important;
-    border-radius: 0  0 5px 5px !important;
-    width: 100% !important;
+    border-radius: 5px !important;
+    width: max-content !important;
+
+}
+
+.ServiceCard {
+    width: 338px;
+    height: 325px;
+    /* background: #002156; */
+    background: #FFFFFF;
+    border-radius: 0px;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   padding-top: 20px;
+
+}
+.ServiceCard:hover {
+    transform: scale(0.9);
+}
+
+.RoundedIcon {
+    border: 2px solid #DB4513;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    background: #002156;
+    margin-left: 30px;
+    margin-right: auto;
+    /* margin-top: 30px; */
+    /* fill: #FFFFFF */
+    /* text-align: center; */
+    padding: 10px;
+}
+
+.ServiceTitle {
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 52px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #002156;
+    
+}
+
+.ServiceDescription {
+    font-family: Jost;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+    /* text-align: center; */
+    color: #002156;
+    height: 125px;
+    width: 300px;
+    overflow-y: scroll;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    
+}
+.ServiceCardSelected {
+    width: 338px;
+    height: 295px;
+    background: #002156;
+    /* background: #FFFFFF; */
+    border-radius: 0px;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   padding-top: 20px;
+
+}
+.RoundedIconSelected {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    /* background: #002156; */
+    background: #FFFFFF;
+    margin-left: 30px;
+    margin-right: auto;
+    /* margin-top: 30px; */
+}
+
+.ServiceTitleSelected {
+    font-family: Jost;
+font-size: 20px;
+font-style: normal;
+font-weight: 800;
+line-height: 52px;
+letter-spacing: 0.1em;
+text-align: center;
+color: #FFFFFF;
+
+}
+
+.ServiceDescriptionSelected {
+    font-family: Jost;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: 0.1em;
+/* text-align: center; */
+color: #FFFFFF;
+height: 100px;
+width: 300px;
+overflow-y: scroll;
+margin-left: auto;
+margin-right: auto;
 
 }

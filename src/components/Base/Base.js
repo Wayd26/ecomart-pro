@@ -11,33 +11,15 @@ import "./Base.css"
 
 const Base = () => {
     return <div className="Base">
+<div 
+// style={{position: 'absolute', top: 0}}
+>
 
-        <Router>
-            {/* <div style={{ position: `fixed`, top: `0` }}> */}
-            <div >
-                <Header  />
-            </div>
-            <div>
-
-            <Switch>
-                <Route
-                    path={routes.HOME}
-                    exact
-                    component={Home}
-                />
-                <Route
-                    path={routes.SERVICES}
-                    exact
-                    component={Services}
-                />
-                <Route
-                    path={routes.CATALOGUES}
-                    exact
-                    component={Catalogues}
-                />
-            </Switch>
-            </div>
-        </Router>
+       <Header />
+</div>
+       <Home />
+       <Services />
+       <Catalogues />
     </div>;
 };
 

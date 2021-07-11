@@ -4,7 +4,8 @@
    margin: 20px;
    border-radius: 8px;
    height: 50vh;
-   width: 300px;
+   width: 350px;
+   background: #002156;
 }
 
 .CatalogCard:hover {
@@ -20,8 +21,8 @@
 
 .AddToCartButton, .AddToCartButton:hover, .AddToCartButton:focus, .AddToCartButton:active {
 
-    background: #061522 !important;
-    border: #061522 !important;
+    background: #DB4513 !important;
+    border: #DB4513 !important;
     box-shadow: none !important;
     border-radius: 5px !important;
     /* width: 100% !important; */
@@ -33,8 +34,9 @@
 }
 
 .Description {
-    height: 125px;
+    height: 75px;
     margin: 5px;
+    color: #FFFFFF;
 }
 
 .Label {
@@ -45,5 +47,5 @@
 }
 
 .CatImage {
-    height: 150px;
+    height: 200px;
 }

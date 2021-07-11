@@ -4,6 +4,10 @@ import {Row, Col} from "react-bootstrap"
 import CatalogCard from "../miniComponents/CatalogCard/CatalogCard"
 import CartList from "../miniComponents/CartList/CartList";
 import {catalogs} from "../../data/catalogs"
+import { AiFillHome } from 'react-icons/ai'
+import { TiBook } from 'react-icons/ti'
+import { RiCustomerService2Line } from 'react-icons/ri'
+
 
 const Catalogues = () => {
 
@@ -53,13 +57,23 @@ setFormAvailable(OpenForm)
 console.log("formAvailablec---> ", formAvailable)
   } ,[formAvailable])
 
-  return <div className="Catalogues">Catalogues
+  return <div id="Catalogues" className="Catalogues">
+    <div className="WhatWeOffer mx-auto">Nos disponibilités </div>
+    <div className="ServiceSectionTitle mx-auto">
+      {/* <Col></Col> */}
+     {/* <Col sm={3}> */}
+       Catalogues
+       {/* </Col> */}
+
+       <TiBook style={{height: `70px`, width: `70px`}}/>
+      
+      </div>
   
-  <Row className="p-5">
+  <Row className="p-2">
     <Col>
     <Row>
     {catalogsState ? catalogsState.map((catalog, key) => {
-        return <Col key={key} sm={4} className="mb-3">
+        return <Col key={key} className="mb-3">
       <CatalogCard 
           id={catalog.id}
           label={catalog.label}
@@ -74,13 +88,13 @@ console.log("formAvailablec---> ", formAvailable)
     </Row>
     </Col>
 
-    {catalogsInCart.length !== 0 && 
+    {/* {catalogsInCart.length !== 0 && 
     <Col sm={3}>
       <CartList catalogsInCart={catalogsInCart} 
                 handleRemoveFromCart={handleRemoveFromCart}
                 OpenForm={OpenForm}/>
     </Col> 
-}
+} */}
   </Row>
   </div>;
 };

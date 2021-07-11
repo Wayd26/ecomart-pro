@@ -2,3 +2,43 @@
     height: 100%;
     width: 100%;
 }
+
+.CarouselText {
+    margin-bottom: 20rem;
+    transition: all .5s ease-in-out;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -45%;
+    width: 90%;
+    /* border-radius: 10px; */
+    /* background: #000; */
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+    /* opacity: 0.25; */
+    transition: opacity .35s ease-in-out;
+    font: Jost;
+    font-weight: 600;
+    border-left: 10px solid #DB4513;
+
+    font-family: Jost;
+font-size: 50px;
+font-style: normal;
+font-weight: 600;
+line-height: 72px;
+letter-spacing: 0.1em;
+text-align: left;
+
+}
+
+li.dot.selected {
+    background: #DB4513 !important;
+    height: 10px !important;
+    width: 10px !important;
+}
+
+.carousel .control-dots{
+    margin-bottom: 10rem !important;
+}

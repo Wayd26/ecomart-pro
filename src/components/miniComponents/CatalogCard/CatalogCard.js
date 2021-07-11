@@ -5,6 +5,9 @@ import Left from "../../../assets/icons/arrow-left.svg"
 import Right from "../../../assets/icons/arrow-right.svg"
 import headspace from "../../../assets/images/headspace.png"
 // import headspace1 from "../../../assets/images/headspace1.png"
+import addToChart from "../../../assets/images/add-to-cart.svg"
+import removeFromChart from "../../../assets/images/remove-from-cart.svg"
+
 
 
 const CatalogCard = ({id, label, description, images, catalogAdded, handleAddToCart, handleRemoveFromCart}) => {
@@ -13,8 +16,8 @@ const CatalogCard = ({id, label, description, images, catalogAdded, handleAddToC
   >
     <Row className="d-flex flex-nowrap ">
 
-    <Carousel variant="dark" prevLabel="" nextLabel="" slide={true} >
-  <Carousel.Item className="CatImage" interval={9999999999}>
+    <Carousel fade transition={1000} variant="dark" prevLabel="" nextLabel="" slide={true} >
+  <Carousel.Item className="CatImage" interval={999999999999}>
     <img
       className="d-block w-100"
       src={headspace}
@@ -57,9 +60,13 @@ const CatalogCard = ({id, label, description, images, catalogAdded, handleAddToC
     <Row className="OverflowHidden Description">{description}</Row>
     <Row>
     {catalogAdded[id] === true ? 
-    <Button disabled className="AddToCartButton" >{"Ajouté"}</Button>
+    <Button onClick={() => handleRemoveFromCart(id)} className="AddToCartButton" >{"Enlever du panier"}
+    <img src={removeFromChart} style={{height: `20px`, width: `20px`, marginLeft: `10px`}} /></Button>
     :
-    <Button className="AddToCartButton" onClick={() => handleAddToCart(id)}>{"Ajouter au panier"}</Button>
+    <Button className="AddToCartButton" 
+    onClick={() => handleAddToCart(id)}
+    >{"Ajouter au panier"}
+    <img src={addToChart} style={{height: `20px`, width: `20px`, marginLeft: `10px`}} /></Button>
     }
     </Row>
   </div>;

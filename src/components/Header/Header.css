@@ -1,12 +1,61 @@
+.TestBlue {
+    border: 2px solid blue;
+}
+.TestGreen {
+    border: 2px solid green;
+}
+.TestRed {
+    border: 2px solid red;
+}
+
 .Header {
-    height: 90px;
+    height: max-content;
     width: 100% !important;
-    border-radius: 0px 0px 5px 5px;
-    background-color: #061522;
+    /* border-radius: 0px 0px 5px 5px; */
+    background: #002156;
+    ;
     margin-right: 0 !important;
     margin-left: 0 !important;
+    text-align:justify
+    /* position: absolute;
+    top: 0;
+    z-index: 99999;
+    margin-bottom: 70px; */
+}
+
+.HeaderRight {
+    margin-right: 32px;
+    float: right;
+
+}
+
+.HeaderRightContact {
+    background: #FFFFFF;
+    color: #DB4513 !important;
+    font: 14px/16px normal Source Sans Pro;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0px 0px 8px 8px;
+    height: 25px;
+    max-width: 350px;
+    /* float: right; */
+
     
-    
+}
+
+.HeaderRightMenu {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.HeaderRightMenuItem {
+    cursor: pointer;
+}
+
+.HeaderRightMenuItem:active, .HeaderRightMenuItem:hover, .HeaderRightMenuItem:focus {
+    cursor: pointer;
+    color: #DB4513 !important;
 }
 
 .HeaderIcon {
@@ -49,3 +98,23 @@ height: 100% !important;
 .totalheight {
     height: 100%;
 }
+
+.TotalCart {
+    height: 50px; 
+    width: 50px;
+    margin-top: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.TotalCart .Badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    background: red;
+    color: white !important;
+  } 
+
+    
