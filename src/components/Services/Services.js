@@ -9,7 +9,7 @@ import { Card, Button } from "react-bootstrap";
 import "../miniComponents/ServiceCard/ServiceCard.css";
 import headspace from "../../assets/images/headspace.png"
 import "./Services.css";
-import {useDispatch, useSelector, shallowEqual} from "react-redux";
+import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import * as actions from "../../redux/actions/index"
 import { AiFillHome } from 'react-icons/ai'
 import { TiBook } from 'react-icons/ti'
@@ -19,17 +19,13 @@ import { RiCustomerService2Line } from 'react-icons/ri'
 const Services = () => {
 
   const dispatch = useDispatch();
-  const states = useSelector(state=>state, shallowEqual);
+  const states = useSelector(state => state, shallowEqual);
 
 
   const [servicesState, setServicesState] = useState(states.services);
-
   const [selectedServices, setSelectedServices] = useState({});
-
   const [serviceAdded, setServiceAdded] = useState({});
-
   const [servicesInCart, setServicesInCart] = useState([]);
-
   const [formAvailable, setFormAvailable] = useState(false);
 
   // const addToChart = (id) => {
@@ -74,7 +70,8 @@ const Services = () => {
   }
 
   useEffect(() => {
-    dispatch({type: "ADD_SERVICES_IN_CART", key: 'servicesInCart', payload: servicesInCart});
+    dispatch({ type: "ADD_SERVICES_IN_CART", key: 'servicesInCart', payload: servicesInCart });
+    console.log("Services in Cart from Redux ---> ", states.servicesInCart)
     console.log("Services in Cart from Redux ---> ", states)
   }, [servicesInCart.length])
 
@@ -91,20 +88,20 @@ const Services = () => {
     // setTimeout(() => {
     //   dispatch(actions.getServices())
     //   console.log("Services from redux ---> ", states)
-      
+
     // }, 1500)
-}, [])
+  }, [])
   return <div id="Services" className="">
     <div className="WhatWeOffer mx-auto">Ce que nous offrons </div>
     <div className="ServiceSectionTitle mx-auto">
       {/* <Col></Col> */}
-     {/* <Col sm={3}> */}
-       Services
-       {/* </Col> */}
+      {/* <Col sm={3}> */}
+      Services
+      {/* </Col> */}
 
-       <RiCustomerService2Line style={{height: `70px`, width: `70px`}}/>
-      
-      </div>
+      <RiCustomerService2Line style={{ height: `50px`, width: `50px`, marginLeft: `15px` }} />
+
+    </div>
     <Row className="p-5">
       <Col
       //  sm={9}
@@ -112,7 +109,7 @@ const Services = () => {
         <Row className="mx-auto ScrollEffect d-flex flex-wrap">
 
           {states.services ? states.services.map((service, key) => {
-            return <Col key={key}  className="mb-3">
+            return <Col key={key} className="mb-3">
               <ServiceCard
                 // addToCart={addToChart} 
                 id={service.id}

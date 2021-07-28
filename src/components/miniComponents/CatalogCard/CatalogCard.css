@@ -1,51 +1,74 @@
 .CatalogCard {
-   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-   padding: 20px;
-   margin: 20px;
-   border-radius: 8px;
-   height: 50vh;
-   width: 350px;
-   background: #002156;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  height: 400px;
+  width: 350px;
+  background: #002156 !important;
+}
+.CatalogCardSelected {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  height: 400px;
+  width: 350px;
+  background: #c96d63 !important;
 }
 
 .CatalogCard:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 2s;
 }
 
 .BackNextIcon {
-    height: 20px;
-    width: 20px;
-    cursor: pointer;
-    margin : auto 10px auto 10px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  margin: auto 10px auto 10px;
 }
 
-.AddToCartButton, .AddToCartButton:hover, .AddToCartButton:focus, .AddToCartButton:active {
-
-    background: #DB4513 !important;
-    border: #DB4513 !important;
-    box-shadow: none !important;
-    border-radius: 5px !important;
-    /* width: 100% !important; */
-    padding: 5px 10px 5px 10px !important;
-
+.AddToCartButton,
+.AddToCartButton:hover,
+.AddToCartButton:focus,
+.AddToCartButton:active {
+  background: #c96d63 !important;
+  border: #c96d63 !important;
+  box-shadow: none !important;
+  border-radius: 5px !important;
+  /* width: 100% !important; */
+  padding: 5px 10px 5px 10px !important;
+}
+.AddToCartButtonSelectedC,
+.AddToCartButtonSelectedC:hover,
+.AddToCartButtonSelectedC:focus,
+.AddToCartButtonSelectedC:active {
+  background: #002156 !important;
+  border: #002156 !important;
+  box-shadow: none !important;
+  border-radius: 5px !important;
+  /* width: 100% !important; */
+  padding: 5px 10px 5px 10px !important;
 }
 .OverflowHidden {
-    overflow-y: scroll !important;
+  overflow-y: scroll !important;
 }
 
 .Description {
-    height: 75px;
-    margin: 5px;
-    color: #FFFFFF;
+  height: 125px;
+  margin: 5px;
+  color: #ffffff;
+  font: Manrope;
 }
 
 .Label {
-    font-weight: bold;
-    height: 50px;
-    padding: 5px;
-    margin: 5px;
+  font-weight: bold;
+  height: 50px;
+  padding: 5px;
+  margin: 5px;
 }
 
 .CatImage {
-    height: 200px;
+  height: 200px;
 }

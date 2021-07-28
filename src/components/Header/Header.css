@@ -1,120 +1,122 @@
 .TestBlue {
-    border: 2px solid blue;
+  border: 2px solid blue;
 }
 .TestGreen {
-    border: 2px solid green;
+  border: 2px solid green;
 }
 .TestRed {
-    border: 2px solid red;
+  border: 2px solid red;
 }
 
 .Header {
-    height: max-content;
-    width: 100% !important;
-    /* border-radius: 0px 0px 5px 5px; */
-    background: #002156;
-    ;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-    text-align:justify
-    /* position: absolute;
+  height: max-content;
+  width: 100% !important;
+  /* border-radius: 0px 0px 5px 5px; */
+  background: #002156;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  text-align: justify;
+  /* position: absolute;
     top: 0;
     z-index: 99999;
     margin-bottom: 70px; */
 }
 
 .HeaderRight {
-    margin-right: 32px;
-    float: right;
-
+  margin-right: 32px;
+  float: right;
 }
 
 .HeaderRightContact {
-    background: #FFFFFF;
-    color: #DB4513 !important;
-    font: 14px/16px normal Source Sans Pro;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 0px 0px 8px 8px;
-    height: 25px;
-    max-width: 350px;
-    /* float: right; */
-
-    
+  background: #ffffff;
+  color: #c96d63 !important;
+  font: 14px/16px normal Source Sans Pro;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 0px 0px 8px 8px;
+  height: 25px;
+  max-width: 350px;
+  /* float: right; */
 }
 
 .HeaderRightMenu {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .HeaderRightMenuItem {
-    cursor: pointer;
+  cursor: pointer;
+  color: #ffffff;
 }
 
-.HeaderRightMenuItem:active, .HeaderRightMenuItem:hover, .HeaderRightMenuItem:focus {
-    cursor: pointer;
-    color: #DB4513 !important;
+.HeaderRightMenuItem:active,
+.HeaderRightMenuItem:hover,
+.HeaderRightMenuItem:focus {
+  cursor: pointer;
+  color: #c96d63 !important;
 }
 
 .HeaderIcon {
-    height: 50px;
-    width: 50px;
-    margin-top: 20px !important;
+  height: 50px;
+  width: 50px;
+  margin-top: 20px !important;
 }
 
 .HeaderAppName {
-    font: normal normal normal 20px/24px Helvetica Neue;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
-    margin-left: -40px;
+  font: normal normal normal 20px/24px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  margin-left: -40px;
 }
 
 .MenuElement {
-    font: normal normal normal 20px/24px Manrope;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
-cursor: pointer;
-height: 100% !important;
-/* margin-top: 15px; */
+  font: normal normal normal 20px/24px Manrope;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  cursor: pointer;
+  height: 100% !important;
+  /* margin-top: 15px; */
 }
-.MenuElement:hover, .MenuElement:active {
-    /* border-bottom: 5px solid #061522 !important; */
-    /* border-top: 7px solid #061522 !important; */
-    background: #f2f2f2 !important;
-    color: #061522;
-    height: 100% !important;
-    
-
+.MenuElement:hover,
+.MenuElement:active {
+  /* border-bottom: 5px solid #061522 !important; */
+  /* border-top: 7px solid #061522 !important; */
+  background: #f2f2f2 !important;
+  color: #061522;
+  height: 100% !important;
 }
 
 .test {
-    border: 5px solid red
+  border: 5px solid red;
 }
 
 .totalheight {
-    height: 100%;
+  height: 100%;
 }
 
 .TotalCart {
-    height: 50px; 
-    width: 50px;
-    margin-top: 15px;
-    position: relative;
-    display: inline-block;
+  height: 40px;
+  width: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-block;
 }
 
 .TotalCart .Badge {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    padding: 10px 10px;
-    border-radius: 50%;
-    background: red;
-    color: white !important;
-  } 
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 10px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white !important;
+}
 
-    
+.menuItem {
+  margin-top: auto;
+  margin-bottom: auto;
+}

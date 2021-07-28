@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col } from 'react-bootstrap'
 import house from '../../assets/icons/house.png'
 import './Header.css'
@@ -7,13 +7,15 @@ import { TiBook } from 'react-icons/ti'
 import { RiCustomerService2Line } from 'react-icons/ri'
 import { useHistory } from "react-router-dom";
 import { FiPhone, FiMail } from "react-icons/fi"
-// import logo from '../../assets/icons/ecomaproexpert2.jpeg'
 import logo from '../../assets/icons/ecoma_pro_expert.svg'
 import cart from '../../assets/images/total_cart.svg'
+import totalCart from '../../assets/images/totalCart.svg'
 import { ToastProvider, useToasts } from 'react-toast-notifications';
 import GetInTouchForm from "../miniComponents/GetInTouchForm/GetInTouchForm"
-import {useDispatch, useSelector, shallowEqual} from "react-redux";
-import * as actions from "../../redux/actions/index"
+import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import * as actions from "../../redux/actions/index";
+import { useMediaQuery } from "react-responsive";
+import { Badge, Button } from 'rsuite';
 
 
 
@@ -22,95 +24,110 @@ const Header = () => {
 
   let history = useHistory();
   const dispatch = useDispatch();
-  const states = useSelector(state=>state, shallowEqual); 
+  const states = useSelector(state => state, shallowEqual);
   const [showForm, setShowForm] = useState(false);
+  const [countInCart, setCountInCart] = useState(0);
   const { addToast } = useToasts();
-  
+
+  const isSmallScreen = useMediaQuery({
+    query: '(max-width: 645px)'
+  })
+
   const goToHome = () => {
-    // history.push("/");
     window.location.href = "#Home";
   }
 
   const goToServices = () => {
     console.log("history is ---> ", history)
-    // history.push("/services");
     window.location.href = "#Services";
   }
 
   const goToCatalogues = () => {
-    // history.push("/catalogues");
     window.location.href = "#Catalogues";
   }
 
   const openCartForm = () => {
-      setShowForm(true);
+    setShowForm(true);
   }
 
   const closeCartForm = () => {
-      setShowForm(false);
+    setShowForm(false);
   }
   const sendCustomerInfo = () => {
     setShowForm(false);
     addToast('Envoyé avec succès', { appearance: 'success', placement: 'top-center', autoDismissTimeout: '2000', autoDismiss: true, });
-   setTimeout(() => {
-     window.location.reload();
-   }, 3000)
+    setTimeout(() => {
+      window.location.reload();
+    }, 3000)
   }
+  const noSendCustomerInfo = () => {
+    addToast('Veuillez revoir vos informations.', { appearance: 'error', placement: 'top-center', autoDismissTimeout: '2000', autoDismiss: true, });
+  }
+  useEffect(() => {
+    console.log("Okay Okay")
+  }, [])
+
+
+  useEffect(() => {
+    let total = states.catalogsInCart.length + states.servicesInCart.length;
+    console.log("TOTAUX ===> ", total)
+    console.log("catalogue length ===> ", total)
+    console.log("service length ===> ", total)
+
+    dispatch({ type: "SET_TOTAL_IN_CART", key: 'totalInCart', payload: total });
+
+  }, [states.catalogsInCart.length, states.servicesInCart.length])
 
   return <Row className="Header d-flex flex-wrap justify-content-between">
-    {showForm === true ? <GetInTouchForm sendCustomerInfo={sendCustomerInfo} showFormModal={showForm} setOpenFormTofalse={closeCartForm} /> : null}
+    {showForm === true ? <GetInTouchForm sendCustomerInfo={sendCustomerInfo} noSendCustomerInfo={noSendCustomerInfo} showFormModal={showForm} setOpenFormTofalse={closeCartForm} /> : null}
 
-    <Col  style={{color: 'white'}}>
-      <img src={logo} style={{float: 'left', background: `#DB4513`}} />
+    <Col style={{ color: 'white', paddingLeft: '0' }}>
+      <span className="text-center">
+        <img src={logo} style={{ float: 'left', background: `#C96D63` }} />
+      </span>
     </Col>
-    <Col sm={8}  className="HeaderRight">
-      <div className="d-flex flex-nowrap HeaderRightContact justify-content-between align-item-end"> 
-      
-      <span className="d-flex flex-nowrap" >
-      <FiPhone style={{width: `40px`, color: `#DB4513`}}/>
-         +229 67 78 52 95</span>
-      <span>
-      <FiMail style={{width: `40px`, color: `#DB4513`}}/>
-        info@gmail.com</span>
 
-       </div>
-      <Row style={{color: 'white'}} className="HeaderRightMenu pt-3">
-        <Col sm={4} className="">
-        <span className="HeaderRightMenuItem" onClick={goToHome}>
-            Accueil
-            <AiFillHome className="my-auto" style={{ marginLeft: `5px`, paddingBottom: `5px`, height: `25px`, width: `25px` }} />
-          </span>
-        </Col>
-        <Col sm={4}>
-        <span className="HeaderRightMenuItem ml-5 mr-5" onClick={goToServices}>Services
-            <RiCustomerService2Line className="my-auto" style={{ marginLeft: `5px`, paddingBottom: `5px`, height: `25px`, width: `25px` }} />
-          </span>
-        </Col>
-        <Col sm={4}>
-        <span className="HeaderRightMenuItem" onClick={goToCatalogues}>Catalogues
-            <TiBook className="my-auto" style={{ marginLeft: `5px`, paddingBottom: `5px`, height: `25px`, width: `25px` }} />
-          </span>
-        </Col>
-       
-      </Row>
-       </Col>
-       <Col>
-       <span onClick={openCartForm}>
-          <span style={{ cursor: `pointer` }}>
+    <Col>
+      <ul class="nav justify-content-end d-flex flex-nowrap">
 
-          <img src={cart} className="TotalCart" />
-    
+        <li class="nav-item my-auto">
+          <a class="nav-link" >
+            <span className="HeaderRightMenuItem d-flex flex-nowrap" onClick={goToHome}>
+              {!isSmallScreen ? "Accueil" : ""}
+              <AiFillHome className="my-auto" style={{ marginLeft: `5px`, paddingBottom: `5px`, height: `25px`, width: `25px` }} />
+            </span>
+          </a>
+        </li>
+        <li class="nav-item my-auto">
+          <a class="nav-link">
+            <span className="HeaderRightMenuItem ml-5 mr-5 d-flex flex-nowrap" onClick={goToServices}>
+              {!isSmallScreen ? "Services" : ""}
+              <RiCustomerService2Line className="my-auto" style={{ marginLeft: `5px`, paddingBottom: `5px`, height: `25px`, width: `25px` }} />
+            </span>
+          </a>
+        </li>
+        <li class="nav-item my-auto">
+          <a class="nav-link">
+            <span className="HeaderRightMenuItem d-flex flex-nowrap" onClick={goToCatalogues}>
+              {!isSmallScreen ? "Catalogues" : ""}
+              <TiBook className="my-auto" style={{ marginLeft: `5px`, paddingBottom: `5px`, height: `25px`, width: `25px` }} />
+            </span>
+          </a>
+        </li>
+
+
+        <li class="nav-item">
+          <span onClick={openCartForm}>
+            <span style={{ cursor: `pointer` }}>
+
+              <img src={totalCart} className="TotalCart" />
+
+            </span>
+
           </span>
-          <span className="Badge" style={{color: `#002156`, border: `solid 2px rgb(219, 69, 19)`,
-                                           borderRadius: `50%`,
-                                           top: `10px`,
-                                           background: `rgb(219, 69,19)`,
-                                           padding: `3px`,
-                                           marginLeft: `-7px`,
-                                           cursor: 'pointer'
-                                           }}>5</span>
-       </span>
-       </Col>
+        </li>
+      </ul>
+    </Col>
 
 
   </Row>

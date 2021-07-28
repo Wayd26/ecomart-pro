@@ -1,3 +1,58 @@
 .RedStar {
-    color: red;
+  color: red;
+}
+
+.modal-content {
+  background-color: #f2f2f2 !important;
+}
+
+.BackButton,
+.BackButton:active,
+.BackButton:hover,
+.BackButton:focus,
+.CancelButton,
+.CancelButton:active,
+.CancelButton:hover,
+.CancelButton:focus {
+  background: #002156 !important;
+  border: #9a9fa7 !important;
+  box-shadow: none !important;
+  border-radius: 5px !important;
+  width: max-content !important;
+}
+
+.NextButton,
+.NextButton:active,
+.NextButton:hover,
+.NextButton:focus,
+.SendButton,
+.SendButton:active,
+.SendButton:hover,
+.SendButton:focus {
+  background: #c96d63 !important;
+  border: #c96d63 !important;
+  box-shadow: none !important;
+  border-radius: 5px !important;
+  width: max-content !important;
+}
+
+.CataloguesTitle,
+.ServicesTitle {
+  border: 2px solid #002156 !important;
+  border-radius: 8px;
+  font: Manrope;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.srv-validation-message {
+  color: red !important;
+}
+
+.errorMessage {
+  color: #fff;
+  background-color: red;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 2px 10px 10px;
 }

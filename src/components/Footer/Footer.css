@@ -1,0 +1,28 @@
+.Footer {
+  height: max-content;
+  width: 100% !important;
+  /* border-radius: 0px 0px 5px 5px; */
+  background: #002156;
+  padding: 10px;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  text-align: justify;
+  /* position: absolute;
+    top: 0;
+    z-index: 99999;
+    margin-bottom: 70px; */
+}
+
+.FooterContact {
+  background: #ffffff;
+  color: #c96d63 !important;
+  font: 18px/24px normal Source Sans Pro;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 25px;
+  /* height: 25px;
+    max-width: 350px; */
+  /* float: right; */
+}

@@ -1,22 +1,23 @@
 .ScrollEffect {
-    overflow-y:scroll;
+  overflow-y: scroll;
 }
 
 .ServiceSectionTitle {
-    font-family: Jost;
-font-style: normal;
-font-weight: normal;
-font-size: 50px;
-line-height: 72px;
-letter-spacing: 0.1em;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 72px;
+  letter-spacing: 0.1em;
 
-color: #061522;
+  color: #061522;
 }
 
 .WhatWeOffer {
-    color: #DB4513;
-border-left: 2px solid #DB4513;
-padding-left: 15px;
-text-align: center;
-width: max-content;
+  color: #c96d63;
+  border-left: 2px solid #c96d63;
+  padding-left: 15px;
+  text-align: center;
+  width: max-content;
+  font: Source Sans Pro;
 }

@@ -1,120 +1,153 @@
 .OverflowHidden {
-    overflow-y: scroll !important;
+  overflow-y: scroll !important;
 }
 
-.AddToCartButtonS, .AddToCartButtonS:hover, .AddToCartButtonS:focus, .AddToCartButtonS:active {
-
-    background: #002156 !important;
-    border: #002156 !important;
-    box-shadow: none !important;
-    border-radius: 5px !important;
-    width: max-content !important;
-
+.AddToCartButtonS,
+.AddToCartButtonS:hover,
+.AddToCartButtonS:focus,
+.AddToCartButtonS:active {
+  background: #002156 !important;
+  border: #002156 !important;
+  box-shadow: none !important;
+  border-radius: 5px !important;
+  width: max-content !important;
+}
+.AddToCartButtonSelected,
+.AddToCartButtonSelected:hover,
+.AddToCartButtonSelected:focus,
+.AddToCartButtonSelected:active {
+  background: #c96d63 !important;
+  border: #c96d63 !important;
+  box-shadow: none !important;
+  border-radius: 5px !important;
+  width: max-content !important;
 }
 
 .ServiceCard {
-    width: 338px;
-    height: 325px;
-    /* background: #002156; */
-    background: #FFFFFF;
-    border-radius: 0px;
-   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-   padding-top: 20px;
-
+  width: 338px;
+  height: 325px;
+  background: #ffffff;
+  border-radius: 0px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding-top: 20px;
 }
 .ServiceCard:hover {
-    transform: scale(0.9);
+  transform: scale(0.9);
+  transition: 2s;
 }
 
 .RoundedIcon {
-    border: 2px solid #DB4513;
-    border-radius: 50%;
-    height: 70px;
-    width: 70px;
-    background: #002156;
-    margin-left: 30px;
-    margin-right: auto;
-    /* margin-top: 30px; */
-    /* fill: #FFFFFF */
-    /* text-align: center; */
-    padding: 10px;
+  border: 2px solid #c96d63 !important;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  background: #002156 !important;
+  margin-left: 30px;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.RoundedIconSelected {
+  border: 2px solid #002156 !important;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  background: #c96d63 !important;
+  margin-left: 30px;
+  margin-right: auto;
+  padding: 10px;
 }
 
 .ServiceTitle {
-    font-family: Jost;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 52px;
-    letter-spacing: 0.1em;
-    text-align: center;
-    color: #002156;
-    
+  font-family: Source Sans Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 52px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #002156 !important;
+}
+.ServiceTitleSelected {
+  font-family: Source Sans Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 52px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #c96d63 !important;
 }
 
 .ServiceDescription {
-    font-family: Jost;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 0.1em;
-    /* text-align: center; */
-    color: #002156;
-    height: 125px;
-    width: 300px;
-    overflow-y: scroll;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  color: #002156 !important;
+  height: 125px !important;
+  width: 300px;
+  overflow-y: scroll;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+.ServiceDescriptionSelected {
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  color: #c96d63 !important;
+  height: 125px !important;
+  width: 300px;
+  overflow-y: scroll;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
 }
 .ServiceCardSelected {
-    width: 338px;
-    height: 295px;
-    background: #002156;
-    /* background: #FFFFFF; */
-    border-radius: 0px;
-   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-   padding-top: 20px;
-
+  width: 338px;
+  height: 295px;
+  background: #002156;
+  border-radius: 0px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding-top: 20px;
 }
 .RoundedIconSelected {
-    border-radius: 50%;
-    height: 70px;
-    width: 70px;
-    /* background: #002156; */
-    background: #FFFFFF;
-    margin-left: 30px;
-    margin-right: auto;
-    /* margin-top: 30px; */
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  background: #ffffff;
+  margin-left: 30px;
+  margin-right: auto;
 }
 
 .ServiceTitleSelected {
-    font-family: Jost;
-font-size: 20px;
-font-style: normal;
-font-weight: 800;
-line-height: 52px;
-letter-spacing: 0.1em;
-text-align: center;
-color: #FFFFFF;
-
+  font-family: Source Sans Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 52px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #ffffff;
 }
 
 .ServiceDescriptionSelected {
-    font-family: Jost;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 26px;
-letter-spacing: 0.1em;
-/* text-align: center; */
-color: #FFFFFF;
-height: 100px;
-width: 300px;
-overflow-y: scroll;
-margin-left: auto;
-margin-right: auto;
-
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  height: 100px;
+  width: 300px;
+  overflow-y: scroll;
+  margin-left: auto;
+  margin-right: auto;
 }
