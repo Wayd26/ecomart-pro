@@ -27,7 +27,7 @@ const Base = () => {
 
     return <div className="Base">
         <div
-            style={{ position: 'fixed', top: 0, width: `100%`, zIndex: `9999999` }}
+            style={{ position: 'fixed', top: 0, width: `100%`, zIndex: `10` }}
         >
 
             <Header />

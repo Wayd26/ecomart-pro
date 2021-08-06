@@ -25,7 +25,7 @@ const Footer = () => {
        </div></Col>
        <Col sm={2}></Col>
        <Col  style={{color: `white`, float: `right`}}>Propulsé par <span style={{fontWeight: `bold`, color:`#C96D63`}}>Hélice</span></Col> */}
-    <div><span className="mb-2" style={{ color: `#C96D63`, fontWeight: `bold` }}>EcomaProExpert <span>&copy;</span>{y}</span></div>
+    <div id="Contact"><span className="mb-2" style={{ color: `#C96D63`, fontWeight: `bold` }}>EcomaProExpert <span>&copy;</span>{y}</span></div>
 
     {/* <div> */}
     {/* <span className="" style={{ fontWeight: `bold` }}> */}

@@ -83,11 +83,11 @@ const Catalogues = () => {
     console.log("Services from redux ---> ", states)
   }, [])
 
-  return <div id="Catalogues" className="Catalogues">
-    <div className="WhatWeOffer mx-auto">Nos disponibilités </div>
+  return <div  className="Catalogues">
+    <div id="Catalogues" className="WhatWeOffer mx-auto">Nos variétés </div>
     <div className="ServiceSectionTitle mx-auto">
 
-      Catalogues
+      Mediathèque
 
 
       <TiBook style={{ height: `50px`, width: `50px`, marginLeft: `15px` }} />

@@ -58,14 +58,25 @@ const CatalogCard = ({ id, label, description, images, catalogAdded, handleAddTo
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="CatImage" interval={9999999999}>
-          <img
-            className="d-block w-100"
-            src={img6}
-            alt="Third slide"
-          />
+          <iframe width="" height="200"
+            src="https://www.youtube.com/embed/9YffrCViTVk?controls=1">
+          </iframe>
+          <Carousel.Caption>         
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item className="CatImage" interval={9999999999}>
+          <iframe width="" height="200"
+            src="https://www.youtube.com/embed/dFUYsbbf6U0?controls=1">
+          </iframe>
           <Carousel.Caption>
-            {/* <h5>Third slide label</h5>
-      <Row>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</Row> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item className="CatImage" interval={9999999999}>
+          <iframe width="" height="200"
+            src="https://www.youtube.com/embed/kiyi-C7NQrQ?controls=1">
+          </iframe>
+          <Carousel.Caption>
+           
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

@@ -7,6 +7,7 @@ import { TiBook } from 'react-icons/ti'
 import { RiCustomerService2Line } from 'react-icons/ri'
 import { useHistory } from "react-router-dom";
 import { FiPhone, FiMail } from "react-icons/fi"
+import { MdContactPhone } from "react-icons/md"
 import logo from '../../assets/icons/ecoma_pro_expert.svg'
 import cart from '../../assets/images/total_cart.svg'
 import totalCart from '../../assets/images/totalCart.svg'
@@ -44,6 +45,10 @@ const Header = () => {
 
   const goToCatalogues = () => {
     window.location.href = "#Catalogues";
+  }
+
+  const goToContact = () => {
+    window.location.href = "#Contact";
   }
 
   const openCartForm = () => {
@@ -106,11 +111,22 @@ const Header = () => {
             </span>
           </a>
         </li>
+        
+        {/* Menu Mediatheque */}
         <li class="nav-item my-auto">
           <a class="nav-link">
             <span className="HeaderRightMenuItem d-flex flex-nowrap" onClick={goToCatalogues}>
-              {!isSmallScreen ? "Catalogues" : ""}
+              {!isSmallScreen ? "Mediathèque" : ""}
               <TiBook className="my-auto" style={{ marginLeft: `5px`, paddingBottom: `5px`, height: `25px`, width: `25px` }} />
+            </span>
+          </a>
+        </li>
+        {/* Menu Contact */}
+        <li class="nav-item my-auto">
+          <a class="nav-link">
+            <span className="HeaderRightMenuItem d-flex flex-nowrap" onClick={goToContact}>
+              {!isSmallScreen ? "Contact" : ""}
+              <MdContactPhone className="my-auto" style={{ marginLeft: `5px`, paddingBottom: `5px`, height: `25px`, width: `25px` }} />
             </span>
           </a>
         </li>
